@@ -1,0 +1,9 @@
+---
+- hosts: dev
+  become_user: ansible
+  remote_user: root
+  become: yes
+  tasks:
+   - name: multi module execution
+     group: name=b21a gid=1300 state=present
+     user: name=suresh1 group=b21a uid=1301 createhome=yes
