@@ -1,0 +1,9 @@
+---
+- hosts: dev
+  remote_user: ansible
+  become_user: root
+  become: yes
+  tasks:
+   - name: create a file
+     file: dest=/tmp/file1 state=touch
+

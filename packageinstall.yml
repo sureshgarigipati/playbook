@@ -1,0 +1,8 @@
+---
+- hosts: dev
+  become_user: root
+  remote_user: ansible
+  become: yes
+  tasks:
+   - name: httpd package install
+     package: name=httpd state=latest
